@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1000" width="720" height="1000"><defs><path id="c" d="M360 500 m-190 0 a190 190 0 1 1 380 0 a190 190 0 1 1 -380 0"/><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb3c7"/><stop offset="1" stop-color="#ff6b9a"/></linearGradient></defs>
+<rect width="720" height="1000" fill="url(#g)"/>
+<circle cx="360" cy="500" r="250" fill="#f5f0e1"/>
+<circle cx="360" cy="500" r="232" fill="none" stroke="#111" stroke-width="4"/>
+<text font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="40" letter-spacing="10" fill="#111"><textPath href="#c">BRAND · IDENTITY · STRATEGY · SYSTEM ·</textPath></text>
+<polygon points="360,420 383,478 445,478 395,514 414,574 360,538 306,574 325,514 275,478 337,478" fill="#111"/></svg>
