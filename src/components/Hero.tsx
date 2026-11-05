@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { typewriterWords } from '../data/content';
 import { useTypewriter } from '../hooks/useTypewriter';
 import { useMediaQuery } from '../hooks/useMediaQuery';
-import { ClientLogos } from './ClientLogos';
 import { reveal } from '../hooks/useReveal';
 
 // Dynamically imported so three.js (~500kB) ships in its own chunk instead
@@ -217,7 +216,6 @@ export function Hero() {
         </div>
       </div>
 
-      <ClientLogos />
     </section>
   );
 }
