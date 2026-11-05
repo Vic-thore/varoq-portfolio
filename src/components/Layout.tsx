@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header } from './Header';
+import { SiteNav } from './SiteNav';
 import { Footer } from './Footer';
 import { WhatsAppButton } from './WhatsAppButton';
 import { PageMeta } from './PageMeta';
@@ -17,7 +17,7 @@ export function Layout() {
         Skip to content
       </a>
 
-      <Header />
+      <SiteNav />
 
       <main id="main">
         <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
