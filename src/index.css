@@ -1794,3 +1794,31 @@
   .tl-body, .tl-item-flip .tl-body { grid-column: 2; text-align: left; justify-self: start; }
 }
 @media (prefers-reduced-motion: reduce) { .tl-node, .tl-body { transition: none; } }
+
+/* ---- Services accordion list ---- */
+.sv-list { list-style: none; margin: 56px 0 0; padding: 0; border-top: 1px solid rgba(255,255,255,0.14); }
+.sv-item { border-bottom: 1px solid rgba(255,255,255,0.14); }
+.sv-head { margin: 0; font: inherit; }
+.sv-btn {
+  width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) 32px; align-items: center; gap: 24px;
+  padding: 28px 0; background: none; border: 0; color: #fff; text-align: left; cursor: pointer;
+}
+.sv-item.is-open .sv-btn { padding-bottom: 14px; align-items: start; }
+.sv-title { display: flex; align-items: center; gap: 16px; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; letter-spacing: -0.01em; }
+.sv-icon { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 12px; border: 1px solid rgba(255,255,255,0.18); color: #fff; transition: background-color .25s, color .25s; }
+.sv-item.is-open .sv-icon { background: var(--brand-bright); border-color: var(--brand-bright); }
+.sv-text { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.72); font-weight: 400; }
+.sv-chev { justify-self: end; color: rgba(255,255,255,0.6); transition: transform .25s; }
+.sv-item.is-open .sv-chev { transform: rotate(180deg); }
+.sv-btn:hover .sv-chev { color: #fff; }
+.sv-panel { padding: 0 0 28px 60px; }
+.sv-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-chips li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border-radius: 999px; background: rgba(255,255,255,0.08); font-size: 13px; color: rgba(255,255,255,0.88); }
+@media (max-width: 768px) {
+  .sv-btn { grid-template-columns: 1fr 32px; gap: 10px 12px; padding: 22px 0; }
+  .sv-title { grid-column: 1; }
+  .sv-chev { grid-column: 2; grid-row: 1; }
+  .sv-text { grid-column: 1 / -1; grid-row: 2; }
+  .sv-panel { padding-left: 0; padding-bottom: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .sv-icon, .sv-chev { transition: none; } }
