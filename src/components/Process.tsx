@@ -1,38 +1,40 @@
 import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { Route, LayoutGrid, MousePointerClick, PenTool, Search, ShieldCheck, type LucideIcon } from 'lucide-react';
 import { processSteps } from '../data/content';
 import { SectionHeading } from './SectionHeading';
-import { ProcessStep } from './ProcessStep';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { cn } from '../lib/cn';
 
+const icons: Record<string, LucideIcon> = {
+  Discovery: Search,
+  Flows: Route,
+  Wireframes: LayoutGrid,
+  Mockups: PenTool,
+  Prototyping: MousePointerClick,
+  Testing: ShieldCheck,
+};
+
+/** Vertical timeline: the line fills as the reader scrolls and each stage lights up when reached. */
 export function Process() {
-  const listRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLOListElement>(null);
   const itemRefs = useRef<Array<HTMLLIElement | null>>([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+  const [reached, setReached] = useState(0);
 
   useEffect(() => {
     const list = listRef.current;
     if (!list) return;
-
     let frame = 0;
 
     const update = () => {
       frame = 0;
       const rect = list.getBoundingClientRect();
-      // The reading line sits ~40% down the viewport; the lime rail fills
-      // to wherever that line has reached inside the list.
-      const line = window.innerHeight * 0.4;
-      const filled = Math.min(Math.max(line - rect.top, 0), rect.height);
-      list.style.setProperty('--scroll-height', `${filled}px`);
-
+      const line = window.innerHeight * 0.5;
+      list.style.setProperty('--fill', `${Math.min(Math.max(line - rect.top, 0), rect.height)}px`);
       let next = 0;
       itemRefs.current.forEach((el, i) => {
-        if (el && el.getBoundingClientRect().top <= line) next = i;
+        if (el && el.getBoundingClientRect().top + 40 <= line) next = i;
       });
-      setActiveIndex(next);
+      setReached(next);
     };
-
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
     };
@@ -57,45 +59,31 @@ export function Process() {
           description="We have become experts in creating top-notch digital products. We design beautifully and develop excellently. And we care deeply about what we do."
         />
 
-        <div className="mt-16 max-[575px]:mt-8">
-          <div className="process-layout">
-            <div className="process-list-wrap" ref={listRef}>
-              <ol className="process-list">
-                {processSteps.map((step, i) => (
-                  <ProcessStep
-                    key={step.index}
-                    step={step}
-                    active={i === activeIndex}
-                    ref={(el) => {
-                      itemRefs.current[i] = el;
-                    }}
-                  />
-                ))}
-              </ol>
-            </div>
-
-            <div className="process-image-wrap hidden md:block">
-              <div className="relative h-[506px] w-[527px] max-w-full overflow-hidden rounded-2xl bg-ink-800">
-                <AnimatePresence>
-                  <motion.img
-                    key={processSteps[activeIndex].index}
-                    src={processSteps[activeIndex].image}
-                    alt={`${processSteps[activeIndex].title} — ${processSteps[activeIndex].tag}`}
-                    width={527}
-                    height={506}
-                    loading="lazy"
-                    decoding="async"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    initial={reducedMotion ? false : { opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={reducedMotion ? undefined : { opacity: 0 }}
-                    transition={{ duration: 0.4, ease: 'easeInOut' }}
-                  />
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ol className="tl" ref={listRef}>
+          <span className="tl-fill" aria-hidden="true" />
+          {processSteps.map((step, i) => {
+            const Icon = icons[step.title] ?? Search;
+            const done = i <= reached;
+            return (
+              <li
+                key={step.index}
+                ref={(el) => {
+                  itemRefs.current[i] = el;
+                }}
+                className={cn('tl-item', i % 2 === 1 && 'tl-item-flip', done && 'is-done')}
+              >
+                <span className="tl-node" aria-hidden="true">
+                  <Icon size={20} strokeWidth={1.75} />
+                </span>
+                <div className="tl-body">
+                  <h3 className="tl-title">{step.title}</h3>
+                  <h4 className="tl-tag font-inter">{step.tag}</h4>
+                  <p className="tl-desc font-inter">{step.description}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );
