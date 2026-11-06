@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <Hero />
       <SelectedWorks />
+      <Process />
       <Services />
       <WorkPreviewHero />
-      <Process />
       <TestimonialWall />
       <CTASection />
       <FAQ />

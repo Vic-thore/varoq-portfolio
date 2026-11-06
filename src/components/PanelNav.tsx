@@ -9,8 +9,8 @@ import { cn } from '../lib/cn';
 const LINKS = [
   { label: 'Home', to: '/', hash: '' },
   { label: 'Work', to: '/work', hash: '' },
-  { label: 'Services', to: '/', hash: '#services' },
   { label: 'Process', to: '/', hash: '#process' },
+  { label: 'Services', to: '/', hash: '#services' },
   { label: 'Contact', to: '/', hash: '#contact' },
 ];
 
