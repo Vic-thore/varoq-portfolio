@@ -12,6 +12,7 @@ const LINKS = [
   { label: 'Work', to: '/work', hash: '' },
   { label: 'Process', to: '/', hash: '#process' },
   { label: 'Services', to: '/', hash: '#services' },
+  { label: 'About', to: '/', hash: '#about' },
   { label: 'Contact', to: '/', hash: '#contact' },
 ];
 

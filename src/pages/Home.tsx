@@ -2,6 +2,7 @@ import { Hero } from '../components/Hero';
 import { SelectedWorks } from '../components/SelectedWorks';
 import { WorkPreviewHero } from '../components/WorkPreviewHero';
 import { Services } from '../components/Services';
+import { About } from '../components/About';
 import { Process } from '../components/Process';
 import { TestimonialWall } from '../components/TestimonialWall';
 import { CTASection } from '../components/CTASection';
@@ -16,6 +17,7 @@ export default function Home() {
       <WorkPreviewHero />
       <Process />
       <Services />
+      <About />
       <TestimonialWall />
       <CTASection />
       <FAQ />
