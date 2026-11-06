@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
  * from a different page), otherwise reset to the top of the new page.
  */
 export function ScrollToHash() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
   // Stop the browser restoring an old scroll position on reload/back.
   useEffect(() => {
@@ -32,7 +32,7 @@ export function ScrollToHash() {
       return () => window.clearTimeout(t);
     }
     jump(0);
-  }, [pathname, hash]);
+  }, [pathname, hash, key]);
 
   return null;
 }
