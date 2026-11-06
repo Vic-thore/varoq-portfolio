@@ -13,17 +13,17 @@
   --color-danger: rgb(220, 38, 38);
 
   /* Varoq brand */
-  --brand-navy: #07142f;
-  --brand-royal: #123b9b;
-  --brand-blue: #0066ff;
-  --brand-bright: #1683ff;
+  --brand-navy: #0b0b0d;
+  --brand-royal: #a3a3a3;
+  --brand-blue: #ffffff;
+  --brand-bright: #ffffff;
 
   --color-white: #ffffff;
-  --color-cream-white: #faf9f4;
+  --color-cream-white: #ffffff;
 
-  --color-dark-gray: #1d2c4d;
-  --color-dark-gray-02: #0d1a33;
-  --color-dark-gray-03: #15233f;
+  --color-dark-gray: #353535;
+  --color-dark-gray-02: #202020;
+  --color-dark-gray-03: #2a2a2a;
   --color-gray-muted-dark: #463f3f;
   --color-gray-muted-light: #5b5252;
 
@@ -35,27 +35,27 @@
   --color-gray-495: #d5d5d5;
   --color-gray-500: #d4d4d8;
   --color-gray-550: #e7e5e4;
-  --color-gray-600: #0c1730;
+  --color-gray-600: #1e1e1e;
   --color-gray-650: #52525b;
-  --color-gray-800: #17253f;
-  --color-gray-900: #0a1329;
+  --color-gray-800: #2b2b2b;
+  --color-gray-900: #1a1a1a;
 
   --color-black: #05070B;
-  --color-black-100: #0f1c38;
-  --color-black-150: #070d1c;
-  --color-black-170: #060a14;
-  --color-black-180: #0a1428;
-  --color-black-200: #07101f;
+  --color-black-100: #242424;
+  --color-black-150: #121212;
+  --color-black-170: #0d0d0d;
+  --color-black-180: #191919;
+  --color-black-200: #131313;
   --color-black-300: #05070B;
-  --color-black-400: #1d2c4d;
-  --color-black-450: #172544;
-  --color-black-500: #1c2a47;
-  --color-black-550: #13203b;
-  --color-black-650: #15233f;
-  --color-black-750: #0e1a33;
-  --color-black-800: #0c162b;
-  --color-black-850: #131f3a;
-  --color-black-950: #2a3b5e;
+  --color-black-400: #353535;
+  --color-black-450: #2e2e2e;
+  --color-black-500: #323232;
+  --color-black-550: #272727;
+  --color-black-650: #2a2a2a;
+  --color-black-750: #202020;
+  --color-black-800: #1c1c1c;
+  --color-black-850: #262626;
+  --color-black-950: #444444;
 
   --color-black-08: rgba(255, 255, 255, 0.08);
   --color-black-400-40: rgba(60, 60, 60, 0.4);
@@ -214,8 +214,8 @@
   .testimonial-card {
     padding: 28px;
     border-radius: 20px;
-    border: 1px solid rgba(22, 131, 255, 0.18);
-    background: linear-gradient(160deg, rgba(18, 59, 155, 0.18), rgba(7, 20, 47, 0.55));
+    border: 1px solid rgba(138, 138, 138, 0.18);
+    background: linear-gradient(160deg, rgba(86, 86, 86, 0.18), rgba(27, 27, 27, 0.55));
   }
   .testimonial-avatar {
     display: inline-flex;
@@ -225,7 +225,7 @@
     width: 44px;
     height: 44px;
     border-radius: 9999px;
-    background: var(--brand-royal, #123B9B);
+    background: var(--brand-royal, #565656);
     color: #fff;
     font-family: 'Sora Variable', Inter-fallback, sans-serif;
     font-size: 15px;
@@ -351,14 +351,14 @@
     background-color: var(--color-black-750);
     color: var(--color-white);
     border-color: transparent;
-    background-image: linear-gradient(110deg, #123b9b 0%, #0066ff 60%, #1683ff 100%);
+    background-image: linear-gradient(110deg, #565656 0%, #808080 60%, #8a8a8a 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: background 0.4s ease, border-color 0.4s ease;
   }
   .btn-gradient:hover {
-    background-image: linear-gradient(90deg, #cfe2ff 0, #ffffff 100%);
+    background-image: linear-gradient(90deg, #e7e7e7 0, #ffffff 100%);
     border-color: var(--color-black-750);
     color: var(--color-black-200);
   }
@@ -960,7 +960,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(ellipse 60% 120% at 85% 50%, rgba(0, 102, 255, 0.28) 0%, rgba(18, 59, 155, 0.14) 45%, transparent 75%);
+    background-image: radial-gradient(ellipse 60% 120% at 85% 50%, rgba(128, 128, 128, 0.28) 0%, rgba(86, 86, 86, 0.14) 45%, transparent 75%);
     background-position: center right 40%;
     background-repeat: no-repeat;
     z-index: 0;
@@ -1072,7 +1072,7 @@
     line-height: 1;
     letter-spacing: -0.04em;
     color: transparent;
-    -webkit-text-stroke: 1.5px rgba(22, 131, 255, 0.4);
+    -webkit-text-stroke: 1.5px rgba(138, 138, 138, 0.4);
     transition: color 0.5s linear, -webkit-text-stroke-color 0.5s linear;
   }
   .process-item.is-active .process-num {
@@ -1772,7 +1772,7 @@
 .tl { position: relative; list-style: none; margin: 64px 0 0; padding: 0; --fill: 0px; }
 .tl::before, .tl-fill { content: ''; position: absolute; left: 50%; top: 0; width: 2px; transform: translateX(-50%); }
 .tl::before { bottom: 0; background: rgba(255,255,255,0.14); }
-.tl-fill { height: var(--fill); background: var(--brand-bright); box-shadow: 0 0 12px rgba(22,131,255,0.6); }
+.tl-fill { height: var(--fill); background: var(--brand-bright); box-shadow: 0 0 12px rgba(138, 138, 138,0.6); }
 .tl-item { position: relative; display: grid; grid-template-columns: 1fr 56px 1fr; column-gap: 28px; padding-block: 44px; }
 .tl-node {
   grid-column: 2; grid-row: 1; justify-self: center; width: 52px; height: 52px; border-radius: 50%;
@@ -1780,7 +1780,7 @@
   border: 2px solid rgba(255,255,255,0.18); position: relative; z-index: 1;
   transition: background-color .3s, color .3s, border-color .3s, box-shadow .3s;
 }
-.tl-item.is-done .tl-node { background: var(--brand-bright); border-color: var(--brand-bright); color: #fff; box-shadow: 0 0 0 6px rgba(22,131,255,0.18); }
+.tl-item.is-done .tl-node { background: var(--brand-bright); border-color: var(--brand-bright); color: #fff; box-shadow: 0 0 0 6px rgba(138, 138, 138,0.18); }
 .tl-body { grid-column: 3; grid-row: 1; padding-top: 4px; opacity: .45; transition: opacity .3s; max-width: 440px; }
 .tl-item.is-done .tl-body { opacity: 1; }
 .tl-item-flip .tl-body { grid-column: 1; text-align: right; justify-self: end; }

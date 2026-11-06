@@ -8,7 +8,7 @@ import { cn } from '../lib/cn';
  * marker the last word is used, keeping any trailing punctuation plain.
  */
 export function AccentTitle({ text, tone = 'dark' }: { text: string; tone?: 'dark' | 'light' }) {
-  const accent = tone === 'light' ? 'text-brand-blue' : 'text-brand-bright';
+  const accent = tone === 'light' ? 'text-[#0A0A0B]/60' : 'text-brand-bright';
   const marked = text.match(/^(.*?)\*(.+?)\*(.*)$/s);
   let before: string, word: string, after: string;
   if (marked) {

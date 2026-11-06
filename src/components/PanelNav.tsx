@@ -27,7 +27,7 @@ function Logo() {
   return (
     <Link to="/" aria-label="Veetech, home" className="flex items-center gap-2 text-white">
       <span className="font-display text-[22px] font-bold leading-none tracking-tight">
-        Veetech<span className="text-brand-bright">.</span>
+        Veetech<span className="text-white/50">.</span>
       </span>
     </Link>
   );
@@ -138,7 +138,7 @@ export function PanelNav() {
           onClick={openMenu}
           aria-expanded={open}
           aria-controls="site-menu"
-          className="inline-flex h-11 items-center gap-2 rounded-full bg-white px-5 font-inter text-[15px] font-medium text-[#07142F] transition-colors hover:bg-white/85"
+          className="inline-flex h-11 items-center gap-2 rounded-full bg-white px-5 font-inter text-[15px] font-medium text-[#0A0A0B] transition-colors hover:bg-white/85"
         >
           <Menu size={18} aria-hidden="true" />
           Menu
@@ -193,7 +193,7 @@ export function PanelNav() {
                   )}
                 >
                   {l.label}
-                  {active && <span className="h-2.5 w-2.5 rounded-full bg-brand-blue" aria-hidden="true" />}
+                  {active && <span className="h-2.5 w-2.5 rounded-full bg-[#0A0A0B]" aria-hidden="true" />}
                 </a>
               </li>
             );
