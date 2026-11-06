@@ -1,3 +1,4 @@
+import { LiveClock } from './LiveClock';
 import { Link } from 'react-router-dom';
 import {
   DribbbleIcon,
@@ -145,6 +146,7 @@ export function Footer() {
             <p className="font-inter text-[14px] leading-[21px] text-gray-200">
               © 2026 Copyright {SITE_NAME}. All rights reserved.
             </p>
+            <LiveClock />
             <a
               href="#"
               className="arrow-hover inline-block font-inter text-[14px] leading-6 text-gray-200"

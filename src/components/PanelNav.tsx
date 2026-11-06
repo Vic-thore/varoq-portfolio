@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { LiveClock } from './LiveClock';
 import { BehanceIcon, InstagramIcon } from './SocialIcons';
 import { CONTACT_EMAIL } from '../lib/contact';
 import { cn } from '../lib/cn';
@@ -131,6 +132,7 @@ export function PanelNav() {
     <>
       <header className="fixed left-0 right-0 top-0 z-[70] flex h-20 items-center justify-between bg-[#05070B] px-8 max-[575px]:px-5">
         <Logo />
+        <LiveClock className="absolute left-1/2 hidden -translate-x-1/2 md:flex" />
         <button
           ref={triggerRef}
           type="button"
