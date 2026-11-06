@@ -4,6 +4,7 @@ import {
   YoutubeIcon,
   FacebookIcon,
   LinkedinIcon,
+  BehanceIcon,
   InstagramIcon,
   XIcon,
   TiktokIcon,
@@ -21,6 +22,7 @@ import type { ReactElement } from 'react';
 type Glyph = (props: { size?: number; className?: string }) => ReactElement;
 
 const socialIcons: Record<string, Glyph> = {
+  Behance: BehanceIcon,
   Dribbble: DribbbleIcon,
   YouTube: YoutubeIcon,
   Facebook: FacebookIcon,

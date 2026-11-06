@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { InstagramIcon, TiktokIcon, XIcon } from './SocialIcons';
+import { BehanceIcon, InstagramIcon } from './SocialIcons';
 import { CONTACT_EMAIL } from '../lib/contact';
 import { cn } from '../lib/cn';
 
@@ -15,9 +15,8 @@ const LINKS = [
 ];
 
 const SOCIALS = [
-  { label: 'Instagram', href: 'https://www.instagram.com/varoqstudio', Icon: InstagramIcon },
-  { label: 'X', href: 'https://x.com/Varoqstudio', Icon: XIcon },
-  { label: 'TikTok', href: 'https://www.tiktok.com/@varoqstudio', Icon: TiktokIcon },
+  { label: 'Behance', href: 'https://www.behance.net/v-tech', Icon: BehanceIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/lycan_x__/', Icon: InstagramIcon },
 ];
 
 const FOCUSABLE = 'a[href], button:not([disabled])';

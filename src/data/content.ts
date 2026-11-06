@@ -272,11 +272,6 @@ export const awards: { src: string; alt: string; width: number; height: number }
 
 // Placeholder until Varoq's real social accounts exist.
 export const socialLinks = [
-  { label: 'Dribbble', href: '#' },
-  { label: 'YouTube', href: '#' },
-  { label: 'Facebook', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Instagram', href: 'https://www.instagram.com/varoqstudio' },
-  { label: 'X', href: 'https://x.com/Varoqstudio' },
-  { label: 'TikTok', href: 'https://www.tiktok.com/@varoqstudio' },
+  { label: 'Behance', href: 'https://www.behance.net/v-tech' },
+  { label: 'Instagram', href: 'https://www.instagram.com/lycan_x__/' },
 ];
