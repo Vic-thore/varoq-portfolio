@@ -673,7 +673,7 @@
      --------------------------------------------------------- */
   .hero-section {
     position: relative;
-    padding-top: 48px;
+    padding-top: 112px;
     padding-bottom: 80px;
     contain: layout paint;
     background-color: var(--color-black-300);
