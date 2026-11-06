@@ -264,7 +264,7 @@
 
   .btn-primary {
     background-color: var(--brand-blue);
-    color: #ffffff;
+    color: #05070B;
     border-color: var(--brand-blue);
     transition: background-color 0.25s ease, border-color 0.25s ease;
   }
@@ -1810,7 +1810,7 @@
 .sv-item.is-open .sv-btn { padding-bottom: 14px; align-items: start; }
 .sv-title { display: flex; align-items: center; gap: 16px; font-size: clamp(20px, 2.2vw, 26px); font-weight: 600; letter-spacing: -0.01em; }
 .sv-icon { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 12px; border: 1px solid rgba(255,255,255,0.18); color: #fff; transition: background-color .25s, color .25s; }
-.sv-item.is-open .sv-icon { background: var(--brand-bright); border-color: var(--brand-bright); }
+.sv-item.is-open .sv-icon { background: var(--brand-bright); border-color: var(--brand-bright); color: #05070B; }
 .sv-text { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.72); font-weight: 400; }
 .sv-chev { justify-self: end; color: rgba(255,255,255,0.6); transition: transform .25s; }
 .sv-item.is-open .sv-chev { transform: rotate(180deg); }

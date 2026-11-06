@@ -115,7 +115,7 @@ export function ContactForm() {
         >
           <div className="flex items-center gap-3">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-blue">
-              <Check size={18} className="text-white" aria-hidden="true" />
+              <Check size={18} className="text-[#05070B]" aria-hidden="true" />
             </span>
             <p className="font-tight text-[18px] text-white">
               {status === 'sent' ? 'Thanks, we’ve got your message' : status === 'email' ? 'Your email app is open' : 'WhatsApp is open with your message'}
