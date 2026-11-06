@@ -28,7 +28,10 @@ export function Process() {
       frame = 0;
       const rect = list.getBoundingClientRect();
       const line = window.innerHeight * 0.5;
-      list.style.setProperty('--fill', `${Math.min(Math.max(line - rect.top, 0), rect.height)}px`);
+      // Stop the fill at the last icon's centre so the line never runs past it.
+      const last = itemRefs.current[itemRefs.current.length - 1]?.querySelector('.tl-node');
+      const end = last ? last.getBoundingClientRect().top + last.getBoundingClientRect().height / 2 - rect.top : rect.height;
+      list.style.setProperty('--fill', `${Math.min(Math.max(line - rect.top, 0), end)}px`);
       let next = 0;
       itemRefs.current.forEach((el, i) => {
         if (el && el.getBoundingClientRect().top + 40 <= line) next = i;
