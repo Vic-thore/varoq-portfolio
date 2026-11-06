@@ -27,7 +27,7 @@ export function Contact() {
               Let&rsquo;s work on what you care about
             </h2>
             <p className="font-tight text-[16px] leading-6 text-gray-300 max-[575px]:text-[14px] max-[575px]:leading-5">
-              Got a project in mind? Brand, website, automation or SEO, tell us
+              Got a project in mind? Brand, website or app, tell us
               what you need and we&rsquo;ll point you in the right direction.
             </p>
             <ContactForm />

@@ -1,6 +1,5 @@
 import { brandingConcepts } from './branding';
 import { nocodeConcepts } from './nocode';
-import { seoConcepts } from './seo';
 import { uiuxConcepts } from './uiux';
 import { webdevConcepts } from './webdev';
 import type { ServiceConcept } from '../components/service-page/types';
@@ -24,7 +23,6 @@ export const workItems: WorkItem[] = [
   ...tag(uiuxConcepts, 'ui-ux-design', 'UI/UX', '/services/ui-ux-design'),
   ...tag(webdevConcepts, 'web-development', 'Web', '/services/web-development'),
   ...tag(nocodeConcepts, 'no-code-development', 'No-code', '/services/no-code-development'),
-  ...tag(seoConcepts, 'seo', 'SEO', '/services/seo'),
 ];
 
 export const workFilters = [
@@ -33,7 +31,6 @@ export const workFilters = [
   { id: 'ui-ux-design', label: 'UI/UX' },
   { id: 'web-development', label: 'Web' },
   { id: 'no-code-development', label: 'No-code' },
-  { id: 'seo', label: 'SEO' },
 ];
 
 /** Extra filters by kind of project. */

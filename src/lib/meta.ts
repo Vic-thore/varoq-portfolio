@@ -35,13 +35,13 @@ export interface PageMeta {
 
 export const DEFAULT_OG_IMAGE = '/og-image.png';
 export const DEFAULT_OG_ALT =
-  'Varoq: branding, web design, development, SEO and automation';
+  'Varoq: branding, web design and development';
 
 const home: PageMeta = {
   path: '/',
-  title: 'Varoq | Branding, Web Design, SEO & Automation Agency',
+  title: 'Varoq | Branding, Web Design & Development Agency',
   description:
-    'Varoq is a digital agency for branding, UI/UX design, web and no-code development, SEO and automation. See our work and book a free discovery call.',
+    'Varoq is a digital agency for branding, UI/UX design, web and no-code development. See our work and book a free discovery call.',
   indexable: true,
 };
 

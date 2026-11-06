@@ -96,16 +96,6 @@ export const serviceRows: ServiceRow[] = [
     title: 'No-Code Development',
     href: '/services/no-code-development',
   },
-  {
-    eyebrow: 'FOR LEAN, SCALING TEAMS',
-    title: 'Automation',
-    href: '/contact',
-  },
-  {
-    eyebrow: 'FOR BEING FOUND ONLINE',
-    title: 'SEO',
-    href: '/services/seo',
-  },
 ];
 
 /* ---------------- Process ---------------- */
@@ -211,7 +201,7 @@ export const faqs: FaqData[] = [
   {
     question: `What services does ${SITE_NAME} offer?`,
     answer: [
-      'We offer six services: branding, UI/UX design, web development, no-code development, automation, and SEO. You can start with one or combine several — we work closely with you to understand your goals and recommend the right mix.',
+      'We offer four services: branding, UI/UX design, web development, and no-code development. You can start with one or combine several — we work closely with you to understand your goals and recommend the right mix.',
     ],
   },
   {
@@ -261,8 +251,6 @@ export const footerColumns = [
       { label: 'UI/UX Design', href: '/services/ui-ux-design' },
       { label: 'Web Development', href: '/services/web-development' },
       { label: 'No-Code Development', href: '/services/no-code-development' },
-      { label: 'Automation', href: '/#services' },
-      { label: 'SEO', href: '/services/seo' },
     ],
   },
 ];

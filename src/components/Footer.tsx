@@ -69,8 +69,8 @@ export function Footer() {
           <div className="footer-grid">
             <div className="footer-text">
               <p className="font-inter text-[18px] leading-[27px] text-gray-495">
-                Branding, UI/UX design, web development, no-code, automation,
-                and SEO: everything your business needs to launch, run, and
+                Branding, UI/UX design, web development and no-code:
+                everything your business needs to launch, run, and
                 grow online.
               </p>
 

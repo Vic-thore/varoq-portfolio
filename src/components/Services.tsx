@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Blocks, Check, ChevronDown, Code2, LayoutTemplate, Palette, Search, Workflow, type LucideIcon } from 'lucide-react';
+import { Blocks, Check, ChevronDown, Code2, LayoutTemplate, Palette, type LucideIcon } from 'lucide-react';
 import { cn } from '../lib/cn';
 
 interface Service {
@@ -25,7 +25,7 @@ const services: Service[] = [
   {
     title: 'Web Development',
     text: 'Fast, accessible, search-friendly websites and web apps, easy to use and easy for your team to maintain.',
-    chips: ['React', 'Accessibility', 'Performance', 'SEO'],
+    chips: ['React', 'Accessibility', 'Performance', 'Search-friendly'],
     Icon: Code2,
   },
   {
@@ -33,18 +33,6 @@ const services: Service[] = [
     text: 'Webflow and other no-code builds you can edit yourself: CMS-driven pages and a clean handover.',
     chips: ['Webflow', 'CMS', 'Handover'],
     Icon: Blocks,
-  },
-  {
-    title: 'Automation',
-    text: 'Connect your forms, CRM, email and spreadsheets so routine work runs itself.',
-    chips: ['Workflows', 'n8n', 'Integrations'],
-    Icon: Workflow,
-  },
-  {
-    title: 'SEO',
-    text: 'Technical SEO, content that answers real questions and local search visibility.',
-    chips: ['Technical', 'Content', 'Local'],
-    Icon: Search,
   },
 ];
 
@@ -59,7 +47,7 @@ export function Services() {
           Design, build, and grow your business online
         </h2>
         <p className="mt-5 max-w-[520px] font-inter text-[16px] leading-[26px] text-white/70">
-          Branding, UI/UX, web development, no-code, automation, and SEO under one roof.
+          Branding, UI/UX, web development and no-code under one roof.
         </p>
 
         <ul className="sv-list">

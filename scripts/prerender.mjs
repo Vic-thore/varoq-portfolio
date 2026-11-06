@@ -154,8 +154,6 @@ const NAV = [
   ['/services/ui-ux-design', 'UI/UX design'],
   ['/services/web-development', 'Web development'],
   ['/services/no-code-development', 'No-code development'],
-  ['/services/automation', 'Automation'],
-  ['/services/seo', 'SEO'],
   ['/ai-solutions', 'AI solutions'],
   ['/work', 'Work'],
   ['/contact', 'Contact'],

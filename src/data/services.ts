@@ -18,15 +18,6 @@ import {
   Heart,
   Blocks,
   Layers3,
-  GitBranch,
-  Database,
-  Workflow,
-  Mail,
-  Bot,
-  Gauge,
-  FileText,
-  MapPin,
-  TrendingUp,
 } from 'lucide-react';
 
 export interface ServiceCard {
@@ -167,72 +158,6 @@ export const serviceGroups: ServiceGroup[] = [
         icon: Blocks,
         title: 'MVPs & prototypes',
         description: 'Validate a product before committing to a full engineering build.',
-      },
-    ],
-  },
-  {
-    slug: 'automation',
-    tabLabel: 'Automation',
-    href: '/services/automation',
-    summary: 'Connect the tools your team already uses and cut repetitive work.',
-    cards: [
-      {
-        icon: GitBranch,
-        title: 'Lead routing',
-        description: 'New leads routed to the right inbox or rep automatically.',
-      },
-      {
-        icon: Database,
-        title: 'CRM sync',
-        description: 'Keep your CRM updated without manual data entry.',
-      },
-      {
-        icon: Workflow,
-        title: 'Internal workflow automation',
-        description: 'Connect the tools your team already uses.',
-      },
-      {
-        icon: Mail,
-        title: 'Email & follow-up sequences',
-        description: 'Timely follow-ups that go out without anyone remembering to send them.',
-      },
-      {
-        icon: Bot,
-        title: 'AI-assisted workflows',
-        description: 'Add summarizing, drafting, and triage steps to the processes you already run.',
-      },
-    ],
-  },
-  {
-    slug: 'seo',
-    tabLabel: 'SEO',
-    href: '/services/seo',
-    summary: 'Get found by the people already searching for what you offer.',
-    cards: [
-      {
-        icon: Gauge,
-        title: 'Technical SEO audit',
-        description: 'Find and fix the crawling, speed, and indexing issues holding your rankings back.',
-      },
-      {
-        icon: Search,
-        title: 'Keyword & competitor research',
-        description: 'Find the searches your buyers actually make and where rivals are winning.',
-      },
-      {
-        icon: FileText,
-        title: 'On-page & content optimization',
-        description: 'Titles, structure, and copy tuned to rank and to convert.',
-      },
-      {
-        icon: MapPin,
-        title: 'Local SEO',
-        description: 'Show up when people nearby search for what you offer.',
-      },
-      {
-        icon: TrendingUp,
-        title: 'Reporting & analytics',
-        description: 'Clear reporting tied to leads and revenue, not vanity rankings.',
       },
     ],
   },
