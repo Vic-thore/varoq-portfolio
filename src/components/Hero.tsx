@@ -7,18 +7,18 @@ import { reveal } from '../hooks/useReveal';
 const cover = caseStudies.find((c) => c.image);
 
 /** Giant stacked headline. Size scales with the viewport so the longest line (DESIGN ♥ CODE) always fits. */
-const H = 'font-inter font-extralight leading-[0.95] tracking-[0.05em] text-white text-[clamp(32px,8.6vw,138px)]';
+const H = 'font-inter font-extralight leading-[0.95] tracking-[0.05em] text-white text-[clamp(32px,10.2vw,190px)]';
 
 export function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-ink pb-20 pt-[112px]" aria-labelledby="hero-title">
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-ink pb-16 pt-[104px]" aria-labelledby="hero-title">
       {/* dot grid */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:radial-gradient(circle,#fff_1px,transparent_1px)] [background-size:20px_20px]"
       />
 
-      <div className="container-zf relative">
+      <div className="relative mx-auto w-full max-w-[1800px] px-4 md:px-6">
         <h1 id="hero-title" className="sr-only">
           Digital products, design and code by Veetech
         </h1>
@@ -51,7 +51,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <motion.div {...reveal(0.28)} className="mx-auto mt-10 flex max-w-[1100px] flex-col gap-3 md:flex-row md:items-center md:gap-6">
+        <motion.div {...reveal(0.28)} className="mx-auto mt-10 flex max-w-none flex-col gap-3 md:flex-row md:items-center md:gap-6">
           <div className="h-px w-full flex-1 bg-white/20" />
           <span className="whitespace-nowrap font-inter text-[12px] uppercase tracking-[0.14em] text-white/60 md:text-[13px]">
             Lagos, Nigeria
@@ -64,7 +64,7 @@ export function Hero() {
 
         <motion.div
           {...reveal(0.36)}
-          className="mx-auto mt-12 flex max-w-[1100px] flex-col items-start gap-8 md:flex-row md:items-end md:justify-between"
+          className="mx-auto mt-12 flex max-w-none flex-col items-start gap-8 md:flex-row md:items-end md:justify-between"
         >
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-8">
             {cover && (
