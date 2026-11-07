@@ -106,7 +106,7 @@ export default function CaseStudy() {
               width={1200}
               height={800}
               decoding="async"
-              className="mx-auto h-auto max-h-[80vh] w-full object-contain"
+              className="block h-auto w-full"
             />
           </motion.div>
         </div>
