@@ -1,4 +1,5 @@
 import { Hero } from '../components/Hero';
+import { ClientLogos } from '../components/ClientLogos';
 import { SelectedWorks } from '../components/SelectedWorks';
 import { WorkPreviewHero } from '../components/WorkPreviewHero';
 import { Services } from '../components/Services';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <ClientLogos />
       <SelectedWorks />
       <WorkPreviewHero />
       <Process />

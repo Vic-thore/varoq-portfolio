@@ -48,16 +48,17 @@ function Logo({ logo, hidden }: { logo: ClientLogo; hidden: boolean }) {
 export function ClientLogos() {
   if (clientLogos.length === 0) return null;
 
-  const loop = [...clientLogos, ...clientLogos];
+  // Four copies so each half of the track is wider than any screen; the -50% loop then never shows a gap.
+  const loop = [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <div className="marquee">
-      <div className="container-zf overflow-hidden">
+    <div className="marquee border-y border-white/10 !py-10">
+      <div className="overflow-hidden">
         <p className="text-center font-inter text-[14px] font-medium uppercase leading-none text-white">
-          Brands I&rsquo;ve built for
+          Brands I&rsquo;ve worked with
         </p>
 
-        <div className="mt-6 py-5" aria-label="Brands we have worked with">
+        <div className="mt-6 py-5 [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]" aria-label="Brands I have worked with">
           <div className="marquee-track">
             {loop.map((logo, i) => (
               <div
