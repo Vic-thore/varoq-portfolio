@@ -119,6 +119,10 @@ export const behanceProjects: Behance[] = [
     approach: 'Website design for an architecture practice.',
     delivered: ['Website design'],
     behanceUrl: 'https://www.behance.net/gallery/225573945/Architecture-website',
+    gallery: [
+      { src: '/images/projects/architecture-website-1-pages.webp', alt: 'Architecture website pages: "Architecture that defines space" hero, recent projects, services over a house photo, testimonial and footer', wide: true },
+      { src: '/images/projects/architecture-website-2-laptop.webp', alt: 'The architecture website hero, "Architectural Coastal Design", shown on a laptop on a dark desk', wide: true },
+    ],
   },
   {
     ...base,
