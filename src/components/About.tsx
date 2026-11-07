@@ -42,11 +42,11 @@ export function About() {
           </div>
 
           <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2">
-            {FACTS.map((f) => (
-              <div key={f.label} className="bg-ink p-5">
+            {FACTS.map((f, i) => (
+              <Reveal key={f.label} delay={i * 0.08} className="bg-ink p-5">
                 <dt className="text-[12px] uppercase tracking-[0.14em] text-white/50">{f.label}</dt>
                 <dd className="mt-1.5 text-[18px] text-white">{f.value}</dd>
-              </div>
+              </Reveal>
             ))}
           </dl>
 

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Columns2, LayoutGrid, Rows3 } from 'lucide-react';
-import { Reveal, SplitReveal } from './Reveal';
+import { ImageReveal, Reveal, SplitReveal } from './Reveal';
 import { caseStudies } from '../data/caseStudies';
 
 type View = 'slider' | 'grid' | 'stack';
@@ -123,10 +123,10 @@ export function SelectedWorks() {
           {items.map((c, i) => (
             <Reveal key={c.slug} delay={(i % 3) * 0.08}>
             <Link to={`/work/${c.slug}`} className="group block">
-              <div className="aspect-[16/10] overflow-hidden rounded-[10px]">
+              <ImageReveal className="aspect-[16/10] overflow-hidden rounded-[10px]">
                 <img src={c.image} alt={c.alt} loading="lazy" decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-              </div>
+              </ImageReveal>
               <Meta i={i} c={c} />
             </Link>
             </Reveal>
@@ -148,10 +148,10 @@ export function SelectedWorks() {
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
               </div>
-              <div className="aspect-[16/9] overflow-hidden rounded-[10px] max-[575px]:aspect-[4/3]">
+              <ImageReveal className="aspect-[16/9] overflow-hidden rounded-[10px] max-[575px]:aspect-[4/3]">
                 <img src={c.image} alt={c.alt} loading="lazy" decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" />
-              </div>
+              </ImageReveal>
             </Link>
           ))}
         </div>
