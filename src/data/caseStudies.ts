@@ -14,7 +14,7 @@ import { behanceProjects } from './behance';
  *   challenge   the problem the client faced
  *   results     real, measurable outcomes: [{ value: '+42%', label: 'Organic traffic' }]
  *   testimonial a real quote with name and role
- *   gallery     extra images: [{ src, alt }]
+ *   gallery     extra images: [{ src, alt, wide? }] (wide = full-width row)
  *   tools       stack or software used
  *   year        '2026'
  *   isConcept   false for real work (changes the labels); past projects live in
@@ -24,7 +24,7 @@ export interface CaseStudyDetails {
   challenge?: string;
   results?: { value: string; label: string }[];
   testimonial?: { quote: string; name: string; role: string };
-  gallery?: { src: string; alt: string }[];
+  gallery?: { src: string; alt: string; wide?: boolean }[];
   tools?: string[];
   year?: string;
   isConcept?: boolean;

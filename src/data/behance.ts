@@ -35,6 +35,12 @@ export const behanceProjects: Behance[] = [
     approach: 'UI/UX design for a platform that helps people learn the Yorùbá language.',
     delivered: ['UI design'],
     behanceUrl: 'https://www.behance.net/gallery/253592721/Oluko',
+    gallery: [
+      { src: '/images/projects/oluko-1-website-hero.webp', alt: 'Olùkọ website hero: "Learn Yorùbá. Reconnect with Your Roots." over a textured portrait of five men in traditional dress', wide: true },
+      { src: '/images/projects/oluko-2-home-grow.webp', alt: 'Olùkọ "How would you like to grow?" section with the app home screen, a mission card and a portrait' },
+      { src: '/images/projects/oluko-3-mission-steps.webp', alt: 'Olùkọ mission section: a phone showing the Learn screen beside three steps, from the proficiency test to tracking progress' },
+      { src: '/images/projects/oluko-4-app-download.webp', alt: 'Olùkọ app download banner: "Take Olùkọ everywhere you go" with streak, learn, profile and badge screens on a green background', wide: true },
+    ],
     isConcept: false,
   },
   {

@@ -164,7 +164,7 @@ export default function CaseStudy() {
         <section className="pb-[100px] max-[575px]:pb-16" aria-label="Gallery">
           <div className="container-zf grid grid-cols-1 gap-6 md:grid-cols-2">
             {study.gallery.map((g) => (
-              <div key={g.src} className="overflow-hidden rounded-3xl border border-ink-400 bg-ink-800">
+              <div key={g.src} className={`overflow-hidden rounded-3xl border border-ink-400 bg-ink-800 ${g.wide ? 'md:col-span-2' : ''}`}>
                 <img src={g.src} alt={g.alt} loading="lazy" decoding="async" className="h-auto w-full" />
               </div>
             ))}
