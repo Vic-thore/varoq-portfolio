@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import { Reveal, SplitReveal } from './Reveal';
 
 /** Facts below come from the public Behance profile (behance.net/v-tech). Edit freely. */
 const FACTS = [
@@ -20,15 +21,13 @@ export function About() {
       <div className="container-zf grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-20">
         <div>
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-white/60">About</p>
-          <h2 id="about-heading" className="mt-4 text-[clamp(36px,5vw,60px)] font-medium leading-[1.05] tracking-tight text-white">
-            Hi, I&apos;m Oluwasegun.
-          </h2>
-          <p className="mt-5 text-[17px] leading-relaxed text-white/65">
+          <SplitReveal id="about-heading" text="Hi, I'm Oluwasegun." className="mt-4 text-[clamp(36px,5vw,60px)] font-medium leading-[1.05] tracking-tight text-white" />
+          <Reveal as="p" delay={0.2} className="mt-5 text-[17px] leading-relaxed text-white/65">
             Webflow developer and UI/UX designer in Lagos.
-          </p>
+          </Reveal>
         </div>
 
-        <div>
+        <Reveal delay={0.15}>
           <div className="space-y-5 text-[18px] leading-[1.7] text-white/80">
             <p>
               I&apos;m a Webflow developer and UI/UX designer with over four years of experience, focused on building
@@ -66,7 +65,7 @@ export function About() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

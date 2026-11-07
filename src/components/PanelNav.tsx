@@ -90,6 +90,7 @@ export function PanelNav() {
   useEffect(() => {
     if (!open) return;
     document.body.style.overflow = 'hidden';
+    window.__lenis?.stop();
     const frame = requestAnimationFrame(() => closeRef.current?.focus());
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -115,6 +116,7 @@ export function PanelNav() {
       cancelAnimationFrame(frame);
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      window.__lenis?.start();
       triggerRef.current?.focus();
     };
   }, [open]);

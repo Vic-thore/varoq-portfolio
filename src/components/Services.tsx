@@ -1,3 +1,4 @@
+import { Reveal, SplitReveal } from './Reveal';
 import { useState } from 'react';
 import { Blocks, Check, ChevronDown, Code2, LayoutTemplate, Palette, type LucideIcon } from 'lucide-react';
 import { cn } from '../lib/cn';
@@ -43,18 +44,16 @@ export function Services() {
     <section id="services" className="section-pad above-glow relative bg-ink" aria-labelledby="services-heading">
       <div className="container-zf">
         <p className="eyebrow">What I do</p>
-        <h2 id="services-heading" className="section-title mt-4 max-w-[760px]">
-          Design, build, and grow your business online
-        </h2>
-        <p className="mt-5 max-w-[520px] font-inter text-[16px] leading-[26px] text-white/70">
+        <SplitReveal id="services-heading" className="section-title mt-4 max-w-[760px]" text="Design, build, and grow your business online" />
+        <Reveal as="p" delay={0.15} className="mt-5 max-w-[520px] font-inter text-[16px] leading-[26px] text-white/70">
           Branding, UI/UX, web development and no-code under one roof.
-        </p>
+        </Reveal>
 
         <ul className="sv-list">
           {services.map(({ title, text, chips, Icon }, i) => {
             const isOpen = open === i;
             return (
-              <li key={title} className={cn('sv-item', isOpen && 'is-open')}>
+              <Reveal as="li" delay={i * 0.08} key={title} className={cn('sv-item', isOpen && 'is-open')}>
                 <h3 className="sv-head">
                   <button
                     type="button"
@@ -83,7 +82,7 @@ export function Services() {
                     ))}
                   </ul>
                 </div>
-              </li>
+              </Reveal>
             );
           })}
         </ul>

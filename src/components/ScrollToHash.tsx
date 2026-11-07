@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 /**
@@ -9,6 +9,8 @@ import { useLocation } from 'react-router-dom';
 export function ScrollToHash() {
   const { pathname, hash, key } = useLocation();
 
+  const prevPath = useRef<string | null>(null);
+
   // Stop the browser restoring an old scroll position on reload/back.
   useEffect(() => {
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -17,11 +19,17 @@ export function ScrollToHash() {
   useLayoutEffect(() => {
     // html has scroll-behavior: smooth, which would animate this jump and get
     // cut short while a lazy page loads. Force an instant jump instead.
-    const jump = (top: number) => window.scrollTo({ top, left: 0, behavior: 'instant' as ScrollBehavior });
+    const jump = (top: number) => {
+      if (window.__lenis) window.__lenis.scrollTo(top, { immediate: true, force: true });
+      else window.scrollTo({ top, left: 0, behavior: 'instant' as ScrollBehavior });
+    };
     if (hash) {
       const el = document.getElementById(hash.slice(1));
       if (el) {
-        jump(el.getBoundingClientRect().top + window.scrollY);
+        const samePage = prevPath.current === pathname && window.__lenis;
+        prevPath.current = pathname;
+        if (samePage) window.__lenis!.scrollTo(el, { offset: -40, duration: 1.4 });
+        else jump(el.getBoundingClientRect().top + window.scrollY);
         return;
       }
       // Target not rendered yet (lazy route): retry once it mounts.
@@ -31,6 +39,7 @@ export function ScrollToHash() {
       }, 300);
       return () => window.clearTimeout(t);
     }
+    prevPath.current = pathname;
     jump(0);
   }, [pathname, hash, key]);
 

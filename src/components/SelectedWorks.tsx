@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Columns2, LayoutGrid, Rows3 } from 'lucide-react';
+import { Reveal, SplitReveal } from './Reveal';
 import { caseStudies } from '../data/caseStudies';
 
 type View = 'slider' | 'grid' | 'stack';
@@ -67,14 +68,13 @@ export function SelectedWorks() {
   return (
     <section id="work" className="relative bg-ink py-24 font-tight max-[575px]:py-16" aria-labelledby="sw-heading">
       <div className="container-zf text-center">
-        <h2 id="sw-heading" className="text-[clamp(40px,6vw,72px)] font-medium leading-[1.05] tracking-tight text-white">
-          Selected works
-        </h2>
-        <p className="mx-auto mt-5 max-w-[520px] text-[17px] leading-relaxed text-white/65">
+        <SplitReveal id="sw-heading" text="Selected works" className="text-[clamp(40px,6vw,72px)] font-medium leading-[1.05] tracking-tight text-white" />
+        <Reveal as="p" delay={0.15} className="mx-auto mt-5 max-w-[520px] text-[17px] leading-relaxed text-white/65">
           A hand-picked set of recent builds, designed and shipped end to end.
-        </p>
+        </Reveal>
 
-        <div className="mt-12 flex items-center justify-center gap-3" role="toolbar" aria-label="Selected works controls">
+        <Reveal delay={0.25} className="mt-12">
+        <div className="flex items-center justify-center gap-3" role="toolbar" aria-label="Selected works controls">
           {view === 'slider' && (
             <>
               <button type="button" aria-label="Previous project" onClick={() => go(-1)} disabled={active === 0}
@@ -97,9 +97,11 @@ export function SelectedWorks() {
             </button>
           ))}
         </div>
+        </Reveal>
       </div>
 
       {view === 'slider' && (
+        <Reveal delay={0.1}>
         <div ref={track} onScroll={updateActive}
           className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-[max(16px,calc((100vw-1200px)/2))] pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {items.map((c, i) => (
@@ -113,18 +115,21 @@ export function SelectedWorks() {
             </Link>
           ))}
         </div>
+        </Reveal>
       )}
 
       {view === 'grid' && (
         <div className="container-zf mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((c, i) => (
-            <Link key={c.slug} to={`/work/${c.slug}`} className="group block">
+            <Reveal key={c.slug} delay={(i % 3) * 0.08}>
+            <Link to={`/work/${c.slug}`} className="group block">
               <div className="aspect-[16/10] overflow-hidden rounded-[10px]">
                 <img src={c.image} alt={c.alt} loading="lazy" decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
               </div>
               <Meta i={i} c={c} />
             </Link>
+            </Reveal>
           ))}
         </div>
       )}

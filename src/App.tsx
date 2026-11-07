@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import { SmoothScroll } from './lib/smoothScroll';
 import { ScrollToHash } from './components/ScrollToHash';
 import Home from './pages/Home';
 const Work = lazy(() => import('./pages/Work'));
@@ -13,6 +14,7 @@ const toHome = (hash = '') => <Navigate to={`/${hash}`} replace />;
 export default function App() {
   return (
     <BrowserRouter>
+      <SmoothScroll />
       <ScrollToHash />
       <Routes>
         <Route element={<Layout />}>
