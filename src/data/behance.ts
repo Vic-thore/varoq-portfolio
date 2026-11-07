@@ -54,6 +54,11 @@ export const behanceProjects: Behance[] = [
     approach: 'A concept for a healthcare dashboard, designed to make patient and health data easy to scan.',
     delivered: ['Dashboard UI', 'UX concept'],
     behanceUrl: 'https://www.behance.net/gallery/254376397/Health-Vital-Healthcare-Dashboard-UIUX-Concept',
+    gallery: [
+      { src: '/images/projects/health-vital-1-dashboard.webp', alt: 'Health Vital doctor dashboard: patient cards, schedule timeline and recent activity', wide: true },
+      { src: '/images/projects/health-vital-2-tablet-hand.webp', alt: 'The Health Vital dashboard shown on a tablet held in a bright living room' },
+      { src: '/images/projects/health-vital-3-tablet-night.webp', alt: 'The Health Vital dashboard on a tablet in a dim room, with a person reaching toward the screen' },
+    ],
   },
   {
     ...base,
