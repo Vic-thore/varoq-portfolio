@@ -45,7 +45,7 @@ export function Hero() {
           <motion.div {...reveal(0.2)}>
             <span className={`${H} flex items-center`}>
               <span>DESIGN</span>
-              <Heart className="mx-[0.2em] h-[0.9em] w-[0.9em] fill-white text-white" strokeWidth={1.5} />
+              <Heart className="mx-[0.15em] h-[1.3em] w-[1.3em] fill-[#f43f5e] text-[#f43f5e]" strokeWidth={1.5} />
               <span>CODE</span>
             </span>
           </motion.div>
