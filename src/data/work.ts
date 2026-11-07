@@ -32,9 +32,3 @@ export const workFilters = [
   { id: 'web-development', label: 'Web' },
   { id: 'no-code-development', label: 'No-code' },
 ];
-
-/** Extra filters by kind of project. */
-export const workKindFilters = [
-  { id: 'past', label: 'Past projects' },
-  { id: 'concept', label: 'Concepts' },
-];

@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { CTASection } from '../components/CTASection';
 import { SectionHeading } from '../components/SectionHeading';
 import { CoverImage } from '../components/CoverImage';
-import { workFilters, workKindFilters } from '../data/work';
+import { workFilters } from '../data/work';
 import { caseStudies } from '../data/caseStudies';
 import { reveal } from '../hooks/useReveal';
 import { cn } from '../lib/cn';
@@ -13,13 +13,7 @@ import { cn } from '../lib/cn';
 export default function Work() {
   const [filter, setFilter] = useState('all');
   const shown = caseStudies.filter((w) =>
-    filter === 'all'
-      ? true
-      : filter === 'past'
-        ? !w.isConcept
-        : filter === 'concept'
-          ? w.isConcept
-          : w.serviceId === filter
+    filter === 'all' ? true : w.serviceId === filter
   );
 
   return (
@@ -40,7 +34,7 @@ export default function Work() {
             aria-label="Filter by service"
             className="mt-12 flex flex-wrap justify-center gap-2.5 max-[575px]:mt-8"
           >
-            {[...workFilters, ...workKindFilters].map((f) => (
+            {workFilters.map((f) => (
               <button
                 key={f.id}
                 type="button"
