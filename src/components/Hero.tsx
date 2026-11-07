@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Heart } from 'lucide-react';
+import { ArrowUpRight, BadgeQuestionMark, Heart } from 'lucide-react';
 import { BehanceIcon, InstagramIcon } from './SocialIcons';
 import { caseStudies } from '../data/caseStudies';
 import { reveal } from '../hooks/useReveal';
@@ -7,7 +7,7 @@ import { reveal } from '../hooks/useReveal';
 const cover = caseStudies.find((c) => c.image);
 
 /** Giant stacked headline. Size scales with the viewport so the longest line (DESIGN ♥ CODE) always fits. */
-const H = 'font-tight font-light leading-[0.95] tracking-[0.04em] text-white text-[clamp(32px,9.4vw,150px)]';
+const H = 'font-inter font-extralight leading-[0.95] tracking-[0.05em] text-white text-[clamp(32px,8.6vw,138px)]';
 
 export function Hero() {
   return (
@@ -34,7 +34,7 @@ export function Hero() {
           <motion.div {...reveal(0.12)} className="flex flex-col items-center gap-3 md:flex-row md:gap-8">
             <span className={`${H} flex items-center`}>
               <span>PR</span>
-              <span className="mx-[0.04em] inline-block h-[0.62em] w-[0.62em] rounded-full border-[0.09em] border-white" />
+              <BadgeQuestionMark className="mx-[0.16em] h-[1.1em] w-[1.1em] text-white" strokeWidth={1} />
               <span>DUCTS</span>
             </span>
             <p className="max-w-[240px] pt-2 text-center font-inter text-[13px] leading-5 text-white/60 md:text-left md:text-[14px]">
@@ -45,7 +45,7 @@ export function Hero() {
           <motion.div {...reveal(0.2)}>
             <span className={`${H} flex items-center`}>
               <span>DESIGN</span>
-              <Heart className="mx-[0.08em] h-[0.7em] w-[0.7em] fill-white text-white" strokeWidth={1.5} />
+              <Heart className="mx-[0.2em] h-[0.9em] w-[0.9em] fill-white text-white" strokeWidth={1.5} />
               <span>CODE</span>
             </span>
           </motion.div>
