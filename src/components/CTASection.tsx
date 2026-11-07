@@ -39,8 +39,8 @@ export function CTASection() {
           </h2>
           <p className="text-[16px] leading-6 text-muted-foreground">
             If your product isn&apos;t where you want it to be, 30 minutes with
-            us might tell you why. And more often than not, we&apos;re exactly
-            the team to fix it.
+            me might tell you why. And more often than not, I&apos;m exactly
+            the person to fix it.
           </p>
           <Button
             asChild

@@ -30,7 +30,7 @@ export function TestimonialWall() {
         <SectionHeading
           id="testimonials-heading"
           eyebrow="Client words"
-          title="What the people we've built for say"
+          title="What the people I've built for say"
         />
 
         <ul className="testimonial-wall mt-16 grid list-none grid-cols-1 gap-5 max-[575px]:mt-8 md:grid-cols-2 lg:grid-cols-3">

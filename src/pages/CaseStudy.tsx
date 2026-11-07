@@ -203,7 +203,7 @@ export default function CaseStudy() {
 
       {study.isConcept && (
         <p className="container-zf pb-10 text-center font-inter text-[14px] leading-6 text-gray-495">
-          {study.name} is an original concept made to show our approach, not work for a named client.
+          {study.name} is an original concept made to show my approach, not work for a named client.
         </p>
       )}
 
@@ -214,7 +214,7 @@ export default function CaseStudy() {
             <div className="flex items-end justify-between gap-4">
               <h2 className="font-tight text-[28px] text-white font-bold">More {study.serviceLabel} work</h2>
               <Link to={study.href} className="inline-flex min-h-6 items-center font-inter text-[14px] text-primary underline">
-                About our {study.serviceLabel} service
+                About my {study.serviceLabel} service
               </Link>
             </div>
             <ul className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">

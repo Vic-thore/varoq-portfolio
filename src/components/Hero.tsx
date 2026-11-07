@@ -132,7 +132,7 @@ export function Hero() {
               {...reveal(0.14)}
               className="mx-auto mt-3 text-center font-inter text-[20px] capitalize leading-normal text-white"
             >
-              We craft{' '}
+              I craft{' '}
               <span className="inline-block text-left align-bottom text-primary" aria-live="polite">
                 <span>{word}</span>
                 <span className="typewriter-caret" aria-hidden="true">

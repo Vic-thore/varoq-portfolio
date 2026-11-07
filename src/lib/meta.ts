@@ -41,7 +41,7 @@ const home: PageMeta = {
   path: '/',
   title: 'Varoq | Branding, Web Design & Development Agency',
   description:
-    'Varoq is a digital agency for branding, UI/UX design, web and no-code development. See our work and book a free discovery call.',
+    'Varoq is a digital agency for branding, UI/UX design, web and no-code development. See my work and book a free discovery call.',
   indexable: true,
 };
 
@@ -49,9 +49,9 @@ const staticPages: PageMeta[] = [
   home,
   {
     path: '/work',
-    title: 'Our Work | Websites, Branding & UI/UX Projects | Varoq',
+    title: 'My Work | Websites, Branding & UI/UX Projects | Varoq',
     description:
-      'Selected websites, brand identities and UI/UX projects by Varoq, with the role we played and what we delivered on each.',
+      'Selected websites, brand identities and UI/UX projects by Varoq, with the role I played and what I delivered on each.',
     indexable: true,
     breadcrumbs: [{ name: 'Work', path: '/work' }],
   },

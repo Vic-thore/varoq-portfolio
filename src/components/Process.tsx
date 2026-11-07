@@ -57,9 +57,9 @@ export function Process() {
       <div className="container-zf">
         <SectionHeading
           id="process-heading"
-          eyebrow="Our process, Your Advantage"
+          eyebrow="My process, Your Advantage"
           title="From Idea To Execution"
-          description="We have become experts in creating top-notch digital products. We design beautifully and develop excellently. And we care deeply about what we do."
+          description="I create top-notch digital products. I design beautifully and develop excellently. And I care deeply about what I do."
         />
 
         <ol className="tl" ref={listRef}>

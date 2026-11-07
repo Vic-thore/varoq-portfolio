@@ -30,9 +30,9 @@ export default function Work() {
             id="work-heading"
             as="h1"
             className="max-w-[760px]"
-            eyebrow="Our work"
+            eyebrow="My work"
             title="Selected work"
-            description="Projects I’ve built for clients, alongside original concepts that show how we approach branding, design, web, no-code and SEO."
+            description="Projects I’ve built for clients, alongside original concepts that show how I approach branding, design, web, no-code and SEO."
           />
 
           <div
@@ -110,7 +110,7 @@ export default function Work() {
           </ul>
 
           <p className="mx-auto mt-14 max-w-[560px] text-center font-inter text-[14px] leading-6 text-gray-495">
-            Projects marked “Concept” are original work made to show our approach, not
+            Projects marked “Concept” are original work made to show my approach, not
             work for a named client.
           </p>
         </div>

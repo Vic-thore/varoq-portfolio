@@ -4,8 +4,8 @@ import { trackEvent } from '../lib/analytics';
 import { WHATSAPP_NUMBER, whatsappHref } from '../lib/assets';
 
 const steps = [
-  ['Tell us what you need', 'A few lines about the project, goals and timeline is plenty.'],
-  ['We reply with questions or a plan', 'A short call if it helps, or a written outline you can react to.'],
+  ['Tell me what you need', 'A few lines about the project, goals and timeline is plenty.'],
+  ['I reply with questions or a plan', 'A short call if it helps, or a written outline you can react to.'],
   ['You decide', 'A clear scope and price before any work starts.'],
 ];
 
@@ -17,7 +17,7 @@ export function ContactInfo({ className = '' }: { className?: string }) {
         Prefer to talk now?
       </h2>
       <p className="mt-2 font-inter text-[15px] leading-6 text-[#52525b]">
-        The fastest way to reach us is a message. Send a note and we&rsquo;ll pick it up from there.
+        The fastest way to reach me is a message. Send a note and I&rsquo;ll pick it up from there.
       </p>
 
       <div className="mt-6 flex flex-col gap-3">

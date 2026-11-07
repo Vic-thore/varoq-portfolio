@@ -1,4 +1,3 @@
-import { SITE_NAME } from '../lib/assets';
 
 /* ---------------- Hero ---------------- */
 export const typewriterWords = [
@@ -199,22 +198,22 @@ export const faqs: FaqData[] = [
     ],
   },
   {
-    question: `What services does ${SITE_NAME} offer?`,
+    question: 'What services do you offer?',
     answer: [
-      'We offer four services: branding, UI/UX design, web development, and no-code development. You can start with one or combine several — we work closely with you to understand your goals and recommend the right mix.',
+      'I offer four services: branding, UI/UX design, web development, and no-code development. You can start with one or combine several — I work closely with you to understand your goals and recommend the right mix.',
     ],
   },
   {
-    question: `How does ${SITE_NAME} differ from other design studios?`,
+    question: 'How do you differ from other designers?',
     answer: [
-      `${SITE_NAME} treats every engagement as a data-driven partnership rather than a template. We start by digging into the actual problem your users have, not just the brief, and we close the loop with real user testing instead of guessing at what "good" looks like.`,
+      `I treat every engagement as a data-driven partnership rather than a template. I start by digging into the actual problem your users have, not just the brief, and I close the loop with real user testing instead of guessing at what "good" looks like.`,
       "That means user research, flows, wireframes, and prototypes are all treated as one continuous conversation with your users, not separate hand-offs, so the final product actually matches how people want to use it.",
     ],
   },
   {
-    question: `Can I see ${SITE_NAME}'s past work or client feedback?`,
+    question: 'Can I see your past work or client feedback?',
     answer: [
-      `Yes — a sample of our case studies is in the Showcase section above, and a few client quotes are further down the page. We're happy to walk through more detail on a call once we understand what you're building.`,
+      `Yes — a sample of my case studies is in the Selected works section above, and a few client quotes are further down the page. I'm happy to walk through more detail on a call once I understand what you're building.`,
     ],
   },
 ];

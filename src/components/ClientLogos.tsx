@@ -54,7 +54,7 @@ export function ClientLogos() {
     <div className="marquee">
       <div className="container-zf overflow-hidden">
         <p className="text-center font-inter text-[14px] font-medium uppercase leading-none text-white">
-          Brands we&rsquo;ve built for
+          Brands I&rsquo;ve built for
         </p>
 
         <div className="mt-6 py-5" aria-label="Brands we have worked with">

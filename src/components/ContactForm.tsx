@@ -75,7 +75,7 @@ export function ContactForm() {
     else if (!EMAIL_RE.test(values.email.trim()))
       next.email = 'Enter a valid email address, like name@company.com.';
     if (!values.message.trim())
-      next.message = 'Tell us a little about your project.';
+      next.message = 'Tell me a little about your project.';
     return next;
   };
 
@@ -118,12 +118,12 @@ export function ContactForm() {
               <Check size={18} className="text-[#05070B]" aria-hidden="true" />
             </span>
             <p className="font-tight text-[18px] text-white">
-              {status === 'sent' ? 'Thanks, we’ve got your message' : status === 'email' ? 'Your email app is open' : 'WhatsApp is open with your message'}
+              {status === 'sent' ? 'Thanks, I’ve got your message' : status === 'email' ? 'Your email app is open' : 'WhatsApp is open with your message'}
             </p>
           </div>
           <p className="mt-3 font-inter text-[14px] leading-6 text-gray-495">
             {status === 'sent'
-              ? 'We’ll read it and get back to you by email.'
+              ? 'I’ll read it and get back to you by email.'
               : status === 'email'
                 ? 'Press send in your email app to deliver it.'
                 : 'Tap send in WhatsApp to deliver it. Nothing is sent until you do.'}
@@ -284,7 +284,7 @@ export function ContactForm() {
                     id={`${ids}-message`}
                     name="about_project"
                     className="cf-input"
-                    placeholder="Tell us about your project, goals, timeline, or requirements*"
+                    placeholder="Tell me about your project, goals, timeline, or requirements*"
                     value={values.message}
                     onChange={(e) => set('message')(e.target.value)}
                     aria-invalid={Boolean(errors.message)}
@@ -306,10 +306,10 @@ export function ContactForm() {
                   >
                     <AlertCircle size={18} className="mt-0.5 shrink-0 text-white" aria-hidden="true" />
                     <p className="font-inter text-[14px] leading-6 text-gray-495">
-                      We couldn&rsquo;t send that just now.{' '}
+                      I couldn&rsquo;t send that just now.{' '}
                       {WHATSAPP_NUMBER ? (
                         <>
-                          Message us directly on{' '}
+                          Message me directly on{' '}
                           <a className="underline" href={whatsappHref()} target="_blank" rel="noopener noreferrer">
                             WhatsApp
                           </a>

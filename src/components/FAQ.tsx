@@ -8,7 +8,7 @@ export function FAQ() {
       <div className="container-zf">
         <FaqAccordion
           eyebrow="FAQs"
-          title="Questions? We’ve Got Answers"
+          title="Questions? I’ve Got Answers"
           description={`${SITE_NAME} reduces design complexity & speeds up product launches with clear UX workflows, scalable visual systems, and no-code execution.`}
           items={faqs}
           ctaLabel="Book a free call"
