@@ -8,27 +8,12 @@ import { clientLogos, type ClientLogo } from '../data/content';
  * to its case study. Motion stops for visitors who prefer reduced motion.
  */
 // Full class names written out so Tailwind keeps them in the build.
-const toneClass = {
-  alpha: 'logo-white--alpha',
-  'on-dark': 'logo-white--on-dark',
-  'on-light': 'logo-white--on-light',
-} as const;
 
 function Logo({ logo, hidden }: { logo: ClientLogo; hidden: boolean }) {
-  const inner = logo.text ? (
-    <span className="font-display text-[24px] font-semibold leading-none tracking-tight text-white">
-      {logo.text}
+  const inner = (
+    <span className="whitespace-nowrap font-display text-[26px] font-medium leading-none tracking-tight text-white">
+      {logo.alt}
     </span>
-  ) : (
-    <img
-      src={logo.src}
-      alt={hidden ? '' : logo.alt}
-      width={logo.width}
-      height={logo.height}
-      loading="lazy"
-      decoding="async"
-      className={`logo-white ${toneClass[logo.tone ?? 'alpha']} h-8 w-auto max-w-none object-contain`}
-    />
   );
 
   return logo.href ? (
@@ -52,13 +37,13 @@ export function ClientLogos() {
   const loop = [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <div className="marquee border-y border-white/10 !py-10">
+    <div className="marquee border-y border-white/10 !py-8">
       <div className="overflow-hidden">
-        <p className="text-center font-inter text-[14px] font-medium uppercase leading-none text-white">
+        <p className="text-center font-inter text-[13px] font-medium uppercase tracking-[0.14em] leading-none text-white/60">
           Brands I&rsquo;ve worked with
         </p>
 
-        <div className="mt-6 py-5 [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]" aria-label="Brands I have worked with">
+        <div className="mt-6 py-2 [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]" aria-label="Brands I have worked with">
           <div className="marquee-track">
             {loop.map((logo, i) => (
               <div

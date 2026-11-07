@@ -7,7 +7,7 @@ const H = 'font-inter font-extralight leading-[0.95] tracking-[0.05em] text-whit
 
 export function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-ink pb-20 pt-[112px]" aria-labelledby="hero-title">
+    <section id="hero" className="relative overflow-hidden bg-ink pb-14 pt-[112px]" aria-labelledby="hero-title">
       {/* dot grid */}
       <div
         aria-hidden="true"
