@@ -11,7 +11,7 @@ import { clientLogos, type ClientLogo } from '../data/content';
 
 function Logo({ logo, hidden }: { logo: ClientLogo; hidden: boolean }) {
   const inner = (
-    <span className="whitespace-nowrap font-display text-[26px] font-medium leading-none tracking-tight text-white">
+    <span className="whitespace-nowrap font-inter text-[15px] font-medium uppercase leading-none tracking-[0.12em] text-[#05070B]">
       {logo.alt}
     </span>
   );
@@ -19,7 +19,7 @@ function Logo({ logo, hidden }: { logo: ClientLogo; hidden: boolean }) {
   return logo.href ? (
     <Link
       to={logo.href}
-      className="opacity-80 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100"
+      className="opacity-90 transition-opacity duration-200 hover:opacity-60 focus-visible:opacity-60"
       aria-label={hidden ? undefined : `${logo.alt} case study`}
       tabIndex={hidden ? -1 : undefined}
     >
@@ -37,24 +37,19 @@ export function ClientLogos() {
   const loop = [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <div className="marquee border-y border-white/10 !py-8">
-      <div className="overflow-hidden">
-        <p className="text-center font-inter text-[13px] font-medium uppercase tracking-[0.14em] leading-none text-white/60">
-          Brands I&rsquo;ve worked with
-        </p>
-
-        <div className="mt-6 py-2 [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]" aria-label="Brands I have worked with">
-          <div className="marquee-track">
-            {loop.map((logo, i) => (
-              <div
-                className="marquee-item"
-                key={`${logo.alt}-${i}`}
-                aria-hidden={i >= clientLogos.length}
-              >
-                <Logo logo={logo} hidden={i >= clientLogos.length} />
-              </div>
-            ))}
-          </div>
+    <div className="marquee bg-white !py-0" aria-label="Brands I have worked with">
+      <div className="overflow-hidden py-[26px]">
+        <div className="marquee-track">
+          {loop.map((logo, i) => (
+            <div
+              className="marquee-item"
+              key={`${logo.alt}-${i}`}
+              aria-hidden={i >= clientLogos.length}
+            >
+              <Logo logo={logo} hidden={i >= clientLogos.length} />
+              <span aria-hidden="true" className="ml-[56px] inline-block h-[7px] w-[7px] shrink-0 rounded-full bg-[#05070B]" />
+            </div>
+          ))}
         </div>
       </div>
     </div>

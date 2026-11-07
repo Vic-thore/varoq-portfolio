@@ -885,7 +885,7 @@
   .marquee-track {
     display: flex;
     align-items: center;
-    gap: 64px;
+    gap: 56px;
     width: max-content;
     animation: marqueeScroll 45s linear infinite;
   }
