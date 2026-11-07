@@ -16,7 +16,7 @@ export function Hero() {
 
       <div className="container-zf relative">
         <h1 id="hero-title" className="sr-only">
-          Digital products, design and code by Veetech
+          Digital products, design and code by Varoq
         </h1>
 
         <div aria-hidden="true" className="flex flex-col items-center gap-2 md:gap-4">
@@ -54,7 +54,7 @@ export function Hero() {
           </span>
           <span className="flex items-end gap-3 whitespace-nowrap">
             <span className="font-tight text-[24px] font-light text-white md:text-[34px]">DESIGNER</span>
-            <span className="font-tight text-[28px] font-bold italic text-white md:text-[44px]">Veetech</span>
+            <span className="font-tight text-[28px] font-bold italic text-white md:text-[44px]">Varoq</span>
           </span>
         </motion.div>
       </div>

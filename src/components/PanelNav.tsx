@@ -23,13 +23,12 @@ const SOCIALS = [
 
 const FOCUSABLE = 'a[href], button:not([disabled])';
 
-/** Wordmark for the portfolio owner. */
+/** Varoq logo: the mark plus the wordmark. */
 function Logo() {
   return (
-    <Link to="/" aria-label="Veetech, home" className="flex items-center gap-2 text-white">
-      <span className="font-display text-[22px] font-bold leading-none tracking-tight">
-        Veetech<span className="text-white/50">.</span>
-      </span>
+    <Link to="/" aria-label="Varoq, home" className="flex items-center gap-2">
+      <img src="/svgs/logo-mark.svg" alt="" aria-hidden="true" width={50} height={30} className="h-[30px] w-auto" />
+      <span className="font-display text-[26px] font-semibold leading-none tracking-tight text-white">Varoq</span>
     </Link>
   );
 }

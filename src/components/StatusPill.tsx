@@ -81,7 +81,7 @@ export function StatusPill({ className = '' }: { className?: string }) {
         }`}
       >
         <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 border-l border-t border-black/10 bg-white" aria-hidden="true" />
-        <p className="font-inter text-[12px] text-[#05070B]/60">Currently, Veetech is</p>
+        <p className="font-inter text-[12px] text-[#05070B]/60">Currently, Varoq is</p>
         <p className="mt-2 font-tight text-[22px] font-medium leading-tight text-[#05070B]">{slot?.status ?? 'Online'}</p>
         <div className="mt-4 flex items-start justify-between gap-4 border-t border-black/10 pt-3 font-inter text-[12px] text-[#05070B]/60">
           <span>{slot?.note ?? 'Open to new projects.'}</span>
