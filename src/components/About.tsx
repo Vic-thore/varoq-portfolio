@@ -1,5 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
-import { ImageReveal, Reveal, SplitReveal } from './Reveal';
+import { Reveal, SplitReveal } from './Reveal';
 
 /** Facts below come from the public Behance profile (behance.net/v-tech). Edit freely. */
 const FACTS = [
@@ -25,18 +25,6 @@ export function About() {
           <Reveal as="p" delay={0.2} className="mt-5 text-[17px] leading-relaxed text-white/65">
             Webflow developer and UI/UX designer in Lagos.
           </Reveal>
-
-          <ImageReveal className="mt-10 aspect-[4/5] w-full max-w-[460px] overflow-hidden rounded-[14px] border border-white/10">
-            <img
-              src="/images/about.webp"
-              alt="Portrait of Oluwasegun in a black suit, looking down and adjusting his jacket"
-              width={900}
-              height={1125}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover object-[62%_28%]"
-            />
-          </ImageReveal>
         </div>
 
         <Reveal delay={0.15}>
