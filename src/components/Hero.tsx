@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, BadgeQuestionMark, Heart } from 'lucide-react';
-import { BehanceIcon, InstagramIcon } from './SocialIcons';
-import { caseStudies } from '../data/caseStudies';
+import { BadgeQuestionMark, Heart } from 'lucide-react';
 import { reveal } from '../hooks/useReveal';
-
-const cover = caseStudies.find((c) => c.image);
 
 /** Giant stacked headline. Size scales with the viewport so the longest line (DESIGN ♥ CODE) always fits. */
 const H = 'font-inter font-extralight leading-[0.95] tracking-[0.05em] text-white text-[clamp(32px,8.6vw,138px)]';
@@ -60,41 +56,6 @@ export function Hero() {
             <span className="font-tight text-[24px] font-light text-white md:text-[34px]">DESIGNER</span>
             <span className="font-tight text-[28px] font-bold italic text-white md:text-[44px]">Veetech</span>
           </span>
-        </motion.div>
-
-        <motion.div
-          {...reveal(0.36)}
-          className="mx-auto mt-12 flex max-w-[1100px] flex-col items-start gap-8 md:flex-row md:items-end md:justify-between"
-        >
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-8">
-            {cover && (
-              <a
-                href="#work"
-                className="block h-[170px] w-[290px] max-w-full overflow-hidden rounded-md border border-white/15 shadow-lg"
-                aria-label="See selected works"
-              >
-                <img src={cover.image} alt={cover.alt} className="h-full w-full object-cover" loading="eager" decoding="async" />
-              </a>
-            )}
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="btn btn-light font-inter">
-                Schedule Call
-              </a>
-              <a href="#work" className="btn btn-outlined font-inter">
-                See my work
-                <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-5 text-white/80">
-            <a href="https://www.behance.net/v-tech" target="_blank" rel="noopener noreferrer" aria-label="Behance" className="transition hover:text-white">
-              <BehanceIcon size={24} />
-            </a>
-            <a href="https://www.instagram.com/lycan_x__/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transition hover:text-white">
-              <InstagramIcon size={22} />
-            </a>
-          </div>
         </motion.div>
       </div>
     </section>
