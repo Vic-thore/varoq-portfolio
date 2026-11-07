@@ -194,13 +194,13 @@ export const nocodeFaqs: FaqItem[] = [
   {
     question: 'How is no-code different from a custom-built website?',
     answer: [
-      'No-code platforms like Webflow, Framer, and Bubble let us build fast, visually, without writing the underlying code by hand. For most marketing sites, MVPs, and internal tools, the result looks and performs just as well as a custom build, at a fraction of the time and cost.',
+      'No-code platforms like Webflow, Framer, Shopify, WordPress and Bubble let us build fast, visually, without writing the underlying code by hand. For most marketing sites, MVPs, and internal tools, the result looks and performs just as well as a custom build, at a fraction of the time and cost.',
     ],
   },
   {
     question: 'Which platform is right for my project?',
     answer: [
-      'It depends on what you need. Webflow suits content-heavy marketing sites, Framer suits design-forward landing pages, and Bubble or Lovable suit apps with logic, accounts, or a database. We’ll recommend the right one after the discovery call.',
+      'It depends on what you need. Webflow suits content-heavy marketing sites, Framer suits design-forward landing pages, Shopify suits online stores, WordPress suits flexible content sites, and Bubble or Lovable suit apps with logic, accounts, or a database. We’ll recommend the right one after the discovery call.',
     ],
   },
   {

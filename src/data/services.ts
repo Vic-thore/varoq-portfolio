@@ -18,6 +18,8 @@ import {
   Heart,
   Blocks,
   Layers3,
+  ShoppingBag,
+  FileText,
 } from 'lucide-react';
 
 export interface ServiceCard {
@@ -143,6 +145,16 @@ export const serviceGroups: ServiceGroup[] = [
         icon: Layers,
         title: 'Framer sites',
         description: 'Interactive, design-forward sites built and launched fast.',
+      },
+      {
+        icon: ShoppingBag,
+        title: 'Shopify stores',
+        description: 'Custom-themed online stores with product pages, checkout and a setup you can manage.',
+      },
+      {
+        icon: FileText,
+        title: 'WordPress sites',
+        description: 'Flexible, content-rich sites with an editor your team already knows.',
       },
       {
         icon: Heart,

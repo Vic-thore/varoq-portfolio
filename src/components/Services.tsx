@@ -30,8 +30,8 @@ const services: Service[] = [
   },
   {
     title: 'No-Code Development',
-    text: 'Webflow and other no-code builds you can edit yourself: CMS-driven pages and a clean handover.',
-    chips: ['Webflow', 'CMS', 'Handover'],
+    text: 'Websites and stores on Webflow, Framer, Shopify and WordPress that you can edit yourself, with a clean handover.',
+    chips: ['Webflow', 'Framer', 'Shopify', 'WordPress', 'CMS', 'Handover'],
     Icon: Blocks,
   },
 ];
@@ -42,7 +42,7 @@ export function Services() {
   return (
     <section id="services" className="section-pad above-glow relative bg-ink" aria-labelledby="services-heading">
       <div className="container-zf">
-        <p className="eyebrow">What we do</p>
+        <p className="eyebrow">What I do</p>
         <h2 id="services-heading" className="section-title mt-4 max-w-[760px]">
           Design, build, and grow your business online
         </h2>
